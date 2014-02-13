@@ -8,7 +8,7 @@ class CrudOperationsModel extends BaseModel
 {
     protected $entityManager;
     
-    public function __construct($doctrineManager){
+    public function __construct(\Doctrine\ORM\EntityManager $doctrineManager){
         $this->entityManager = $doctrineManager;
     }
     
