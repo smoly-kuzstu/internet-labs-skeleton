@@ -15,7 +15,7 @@ class CacheDecorator extends AbstractDecorator{
             return $this->cacheManager->getByKey($id);
         } else{
             $item = $this->wrappedModel->readItem($id);
-            $this->cacheManager->putKey($id);
+            $this->cacheManager->putKey($id, $item);
             return $item;
         }
     }
