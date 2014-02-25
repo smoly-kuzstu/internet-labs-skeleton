@@ -7,7 +7,7 @@ abstract class AbstractDecorator extends CrudOperationsModel {
     protected $model;
  
     public function __construct(CrudOperationsModel $model) {
-        $this->model = $component;
+        $this->model = $model;
     }
 }
 ?>
