@@ -31,7 +31,7 @@ class DefaultController extends Controller
             )
         );
         
-        return new Response($content);
+        return new Response($content, 200);
     }
     
    /**
