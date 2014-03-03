@@ -15,7 +15,7 @@ use Kuzstu\BlogBundle\Model\Decorator as Decorator;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/viewitem-decorator/{id}", name="kuzstu_blog_view_item")
+     * @Route("/viewitem-decorator/{id}", name="kuzstu_blog_view_item_decorator")
      * @Method("GET")
      * @Template("KuzstuBlogBundle:Default:viewItemAction.html.twig")
     */
@@ -56,7 +56,7 @@ class DefaultController extends Controller
    /**
      * @Route("/viewitem/{id}", name="kuzstu_blog_view_item")
      * @Method("GET")
-     * @Template("KuzstuBlogBundle:Default:viewItemAction.html.twig")
+     * @Template("KuzstuBlogBundle:Default:viewItem.html.twig")
     */
     public function viewItemAction($id){
         $model = $this->container->get('kuzstu_blog.crud_model');
