@@ -27,7 +27,16 @@ class CrudOperationsModel extends BaseModel
         $this->entityManager->persist($entry);
         $this->entityManager->flush();
     }
+    /**
+     * This function create a new entry in a blog
+     * @param string $title Title of entry
+     * @param string $content Text of blog entry
+    */   
     
+    public function createItemByEntity($entity){        
+        $this->entityManager->persist($entity);
+        $this->entityManager->flush();
+    }
     /**
      * This function add comment to entry of a blog
      * @param string $title Title of entry
